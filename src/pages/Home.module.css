@@ -1,0 +1,9 @@
+.homeContainer {
+  background: linear-gradient(39.97deg, #03d6f3 0.79%, #458ff6 79.79%);
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 100px 10%;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
