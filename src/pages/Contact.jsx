@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import emailjs from "@emailjs/browser";
 
 import { IoHome } from "react-icons/io5";
 import sharedStyles from "../components/shared.module.css";
@@ -15,6 +16,30 @@ function Contact() {
     console.log(myRef.current);
     myRef.current.focus();
   }, []);
+
+  function handleForm(e) {
+    e.preventDefault();
+
+    if (!email || !message) return;
+
+    emailjs
+      .send(
+        "service_ilosga9", // Create this in EmailJS dashboard
+        "template_bx1lkqo", // Create this in EmailJS dashboard
+        {
+          reply_to: email,
+          message: message,
+        },
+        "P2vDOOuMWIQU7yndp" // Get this from EmailJS dashboard
+      )
+      .then(() => {
+        setEmail("");
+        setMessage("");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
   return (
     <main>
       <div className={sharedStyles.sectionContainer}>
@@ -23,7 +48,7 @@ function Contact() {
           <p>Interested to collaborate? Feel free to drop me an email.</p>
         </div>
         <div className={styles.contactFormContainer}>
-          <form className={styles.contactForm}>
+          <form className={styles.contactForm} onSubmit={handleForm}>
             <input
               type="email"
               name="email"
