@@ -1,42 +1,8 @@
-.sectionContainer {
-  min-height: 100vh;
-  position: relative;
-  padding: 50px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
 
-.headerContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 60%;
-  align-self: center;
-}
 
-.headerContainer h1 {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 2.9rem;
-  line-height: 57px;
-  text-align: center;
-  margin: 0;
-  color: #000;
-  letter-spacing: 0.2px;
-}
-.headerContainer p {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.4rem;
-  line-height: 1.4rem;
-  text-align: center;
-  margin: 10px 0;
-}
+
+
+
 
 .imgContainer {
   height: 70px;
@@ -78,32 +44,9 @@
   text-wrap: balance;
 }
 
-.footerLink {
-  font-family: Montserrat;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 36px;
-  text-align: center;
-  letter-spacing: -0.015em;
-}
 
-.vectorFrame {
-  position: absolute;
-  z-index: -10;
-  left: 0;
-  bottom: 0;
-  width: 55%;
-}
 
-.vectorFrame img {
-  display: block;
-  max-width: 100%;
-  max-height: 100%;
-}
 
-.homeBg {
-  background: linear-gradient(39.97deg, #03d6f3 0.79%, #458ff6 79.79%);
-}
 
 @media screen and (max-width: 550px) {
   .aboutMain {
@@ -127,5 +70,3 @@
     width: 100%;
   }
 }
-
-

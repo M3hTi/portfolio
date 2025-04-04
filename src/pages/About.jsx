@@ -1,12 +1,14 @@
 import styles from "./About.module.css";
+import sharedStyles from "../components/shared.module.css";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { IoHome } from "react-icons/io5";
 import { Link } from "react-router-dom";
+
 function About() {
   return (
     <main>
-      <div className={styles.sectionContainer}>
-        <div className={styles.headerContainer}>
+      <div className={sharedStyles.sectionContainer}>
+        <div className={sharedStyles.headerContainer}>
           <h1>About Me</h1>
           <p>Front-End Developer | Gamer</p>
         </div>
@@ -30,14 +32,21 @@ function About() {
             />
           </div>
         </div>
-        <div className={styles.footerLink}>
-          Check out my <a href="https://github.com/M3hTi" target="_blank" className="clear-links">projects</a>
+        <div className={sharedStyles.footerLink}>
+          Check out my{" "}
+          <a
+            href="https://github.com/M3hTi"
+            target="_blank"
+            className="clear-links"
+          >
+            projects
+          </a>
         </div>
-        <div className={styles.vectorFrame}>
+        <div className={sharedStyles.vectorFrame}>
           <img src="../../public/vector.png" alt="" />
         </div>
       </div>
-      <button className={`go-home-Btn ${styles.homeBg}`}>
+      <button className={`go-home-Btn ${sharedStyles.homeBg}`}>
         <Link to="/">
           <IoHome className="homeIcon" />
         </Link>
