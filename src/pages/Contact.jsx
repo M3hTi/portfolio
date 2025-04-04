@@ -72,7 +72,29 @@ function Contact() {
             </button>
           </form>
         </div>
-        <div></div>
+        <div className={styles.iconContainer}>
+          <a
+            href="https://github.com/M3hTi"
+            target="_blank"
+            className={styles.socialIcon}
+          >
+            <img src="../../public/github.png" alt="github" />
+          </a>
+          <a
+            href="https://medium.com/@mahdinasir813"
+            target="_blank"
+            className={styles.socialIcon}
+          >
+            <img src="../../public/medium.png" alt="medium" />
+          </a>
+          <a
+            href="https://www.instagram.com/mehdi_n_kh78/"
+            target="_blank"
+            className={styles.socialIcon}
+          >
+            <img src="../../public/instagram.png" alt="instagram" />
+          </a>
+        </div>
         <div className={sharedStyles.footerLink}>
           Read more <Link to="/about">about me.</Link>
         </div>
