@@ -33,9 +33,9 @@ function Home() {
           />
         </div>
       </div>
-      <button className={styles.goHomeBtn}>
-        <Link className="homeIcon">
-          <IoHome />
+      <button className="go-home-Btn">
+        <Link>
+          <IoHome className="homeIcon" />
         </Link>
       </button>
     </main>
