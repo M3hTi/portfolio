@@ -6,7 +6,34 @@
   margin: 0;
 }
 
-body{
+body {
   font-family: "Poppins", sans-serif;
   font-style: normal;
+}
+
+.clear-links {
+  /* text-decoration: none; */
+  color: #000;
+}
+
+.go-home-Btn {
+  right: 28px;
+  bottom: 28px;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  border-style: none;
+  border-radius: 30px;
+  object-fit: contain;
+  box-shadow: 0 4px 31px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 1px 10px 32px rgba(0, 0, 0, 0.45);
+  }
+}
+
+.homeIcon {
+  color: black;
+  font-size: 40px;
 }
