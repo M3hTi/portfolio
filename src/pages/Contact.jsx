@@ -26,13 +26,13 @@ function Contact() {
 
     emailjs
       .send(
-        "service_ilosga9", // Create this in EmailJS dashboard
-        "template_bx1lkqo", // Create this in EmailJS dashboard
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           reply_to: email,
           message: message,
         },
-        "P2vDOOuMWIQU7yndp" // Get this from EmailJS dashboard
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(() => {
         setEmail("");
