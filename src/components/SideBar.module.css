@@ -1,0 +1,109 @@
+.burgerContainer {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  left: 32px;
+  top: 32px;
+  z-index: 1000;
+}
+
+.menuBtn {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 36px;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+/* .menuBtn svg {
+  width: 24px;
+  height: 24px;
+  color: #333;
+} */
+
+.menuWrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1100;
+  width: 300px;
+  height: 100%;
+  animation: slideIn 0.3s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.menu {
+  background: linear-gradient(39.97deg, #03d6f3 0.79%, #458ff6 79.29%);
+  padding: 2.5em 1.5em 0 0;
+  height: 100vh;
+  overflow: hidden !important;
+}
+
+.itemList {
+  padding: 0.8em;
+}
+
+.itemList ul {
+  list-style-type: none;
+}
+
+.itemList li {
+  position: relative;
+  font-size: 2em;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  padding: 10px;
+}
+
+.crossBtn {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  right: 16px;
+  top: 16px;
+}
+
+.crossBtn button {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.crossBtn button:hover {
+  transform: scale(1.1);
+}
