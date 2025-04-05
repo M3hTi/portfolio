@@ -47,3 +47,7 @@ body {
     border-bottom: 5px solid white;
   }
 }
+
+.active {
+  border-bottom: 5px solid white;
+}
