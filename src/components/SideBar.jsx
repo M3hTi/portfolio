@@ -9,9 +9,8 @@ function SideBar() {
 
   useEffect(() => {
     function handleKey(e) {
-      e.preventDefault();
-      console.log(e.key);
       if (e.key === "Escape") {
+        e.preventDefault();
         setIsSideBarOpen(false);
       }
     }
