@@ -37,3 +37,13 @@ body {
   color: black;
   font-size: 40px;
 }
+
+.clear-nav-link {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.2s;
+
+  &:hover {
+    border-bottom: 5px solid white;
+  }
+}
