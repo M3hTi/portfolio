@@ -3,10 +3,12 @@ import sharedStyles from "../components/shared.module.css";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { IoHome } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import SideBar from "../components/SideBar";
 
 function About() {
   return (
     <main>
+      <SideBar />
       <div className={sharedStyles.sectionContainer}>
         <div className={sharedStyles.headerContainer}>
           <h1>About Me</h1>
