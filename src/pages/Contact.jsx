@@ -78,7 +78,7 @@ function Contact() {
         <SocialIcons />
 
         <div className={sharedStyles.footerLink}>
-          Read more <Link to="/about">about me.</Link>
+          Read more <Link to="/about" style={{color: "black"}}>about me.</Link>
         </div>
         <div className={sharedStyles.vectorFrame}>
           <img src="../../public/vector.png" alt="" />
