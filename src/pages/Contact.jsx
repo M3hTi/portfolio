@@ -5,6 +5,8 @@ import emailjs from "@emailjs/browser";
 import { IoHome } from "react-icons/io5";
 import sharedStyles from "../components/shared.module.css";
 import styles from "./Contact.module.css";
+import SocialIcons from "../components/SocialIcons";
+import SideBar from "../components/SideBar";
 
 function Contact() {
   const [email, setEmail] = useState("");
@@ -42,6 +44,7 @@ function Contact() {
   }
   return (
     <main>
+      <SideBar />
       <div className={sharedStyles.sectionContainer}>
         <div className={sharedStyles.headerContainer}>
           <h1>Get in touch.</h1>
@@ -72,29 +75,8 @@ function Contact() {
             </button>
           </form>
         </div>
-        <div className={styles.iconContainer}>
-          <a
-            href="https://github.com/M3hTi"
-            target="_blank"
-            className={styles.socialIcon}
-          >
-            <img src="../../public/github.png" alt="github" />
-          </a>
-          <a
-            href="https://medium.com/@mahdinasir813"
-            target="_blank"
-            className={styles.socialIcon}
-          >
-            <img src="../../public/medium.png" alt="medium" />
-          </a>
-          <a
-            href="https://www.instagram.com/mehdi_n_kh78/"
-            target="_blank"
-            className={styles.socialIcon}
-          >
-            <img src="../../public/instagram.png" alt="instagram" />
-          </a>
-        </div>
+        <SocialIcons />
+
         <div className={sharedStyles.footerLink}>
           Read more <Link to="/about">about me.</Link>
         </div>

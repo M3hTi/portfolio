@@ -51,19 +51,4 @@
   }
 }
 
-.iconsContainer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
 
-.socialIcon {
-  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
-  margin: 21px;
-
-  &:hover {
-    filter: drop-shadow(0 8px 8px rgba(0, 0, 0, 0.32));
-  }
-}
