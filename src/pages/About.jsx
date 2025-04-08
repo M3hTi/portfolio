@@ -5,8 +5,6 @@ import { IoHome } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import SideBar from "../components/SideBar";
 
-import userImage from "../../public/user.jpg";
-
 function About() {
   return (
     <main>
@@ -17,7 +15,7 @@ function About() {
           <p>Front-End Developer | Gamer</p>
         </div>
         <div className={styles.imgContainer}>
-          <img src={userImage} />
+          <img src="/public/user.jpg" />
         </div>
         <div className={styles.aboutMain}>
           <div className={styles.aboutMainLeft}>
