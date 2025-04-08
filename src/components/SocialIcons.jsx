@@ -4,7 +4,7 @@ import styles from "./SocialIcons.module.css";
 const socialAccounts = [
   {
     name: "github",
-    href: "https://github.com/M3hT",
+    href: "https://github.com/M3hTi",
     icon: "../../public/github.png",
   },
   {
@@ -22,7 +22,7 @@ const socialAccounts = [
 function SocialIcons() {
   return (
     <div className={styles.iconContainer}>
-      {Array.from({ length: 3 }, (_, i) => (
+      {Array.from({ length: socialAccounts.length }, (_, i) => (
         <SocialIcon
           acc={socialAccounts.at(i)}
           key={socialAccounts.at(i).name}
