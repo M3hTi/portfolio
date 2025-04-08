@@ -5,17 +5,17 @@ const socialAccounts = [
   {
     name: "github",
     href: "https://github.com/M3hTi",
-    icon: "../../public/github.png",
+    icon: "/public/github.png",
   },
   {
     name: "medium",
     href: "https://medium.com/@mahdinasir813",
-    icon: "../../public/medium.png",
+    icon: "/public/medium.png",
   },
   {
     name: "instagram",
     href: "https://www.instagram.com/mehdi_n_kh78/",
-    icon: "../../public/instagram.png",
+    icon: "/public/instagram.png",
   },
 ];
 

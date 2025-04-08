@@ -15,7 +15,7 @@ function About() {
           <p>Front-End Developer | Gamer</p>
         </div>
         <div className={styles.imgContainer}>
-          <img src="../../public/user.jpg" alt="" />
+          <img src="/public/user.jpg" />
         </div>
         <div className={styles.aboutMain}>
           <div className={styles.aboutMainLeft}>
