@@ -84,7 +84,7 @@ function Contact() {
           </Link>
         </div>
         <div className={sharedStyles.vectorFrame}>
-          <img src="../../public/vector.png" alt="" />
+          <img src="/vector.png" alt="" />
         </div>
       </div>
       <button className={`go-home-Btn ${sharedStyles.homeBg}`}>

@@ -15,7 +15,7 @@ function About() {
           <p>Front-End Developer | Gamer</p>
         </div>
         <div className={styles.imgContainer}>
-          <img src="/public/user.jpg" />
+          <img src="/user.jpg" />
         </div>
         <div className={styles.aboutMain}>
           <div className={styles.aboutMainLeft}>
@@ -45,7 +45,7 @@ function About() {
           </a>
         </div>
         <div className={sharedStyles.vectorFrame}>
-          <img src="../../public/vector.png" alt="" />
+          <img src="/vector.png" alt="" />
         </div>
       </div>
       <button className={`go-home-Btn ${sharedStyles.homeBg}`}>
