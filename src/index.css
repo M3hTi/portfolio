@@ -51,3 +51,8 @@ body {
 .active {
   border-bottom: 5px solid white;
 }
+
+.error {
+  color: red;
+  font-weight: 600;
+}
