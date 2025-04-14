@@ -33,7 +33,7 @@ function Contact() {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(() => {
-        reset()
+        reset();
       })
       .catch((error) => {
         console.error(error);
@@ -66,7 +66,9 @@ function Contact() {
               className={styles.inputBox}
             />
             {errors.email && (
-              <Error className="error">{errors.email.message}</Error>
+              <Error className="error">
+                {errors.email.message || "Email Required"}
+              </Error>
             )}
             <textarea
               {...register("message", {
