@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 
@@ -7,22 +6,21 @@ import sharedStyles from "../components/shared.module.css";
 import styles from "./Contact.module.css";
 import SocialIcons from "../components/SocialIcons";
 import SideBar from "../components/SideBar";
+import { useForm } from "react-hook-form";
+import Error from "../components/Error";
+import { BiHandicap } from "react-icons/bi";
 
 function Contact() {
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
 
-  const myRef = useRef(null);
-
-  useEffect(() => {
-    console.log(myRef.current);
-    myRef.current.focus();
-  }, []);
-
-  function handleForm(e) {
-    e.preventDefault();
-
-    if (!email || !message) return;
+  function handleForm(data) {
+    console.log(data);
+    const { email, message } = data;
 
     emailjs
       .send(
@@ -35,8 +33,7 @@ function Contact() {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(() => {
-        setEmail("");
-        setMessage("");
+        reset()
       })
       .catch((error) => {
         console.error(error);
@@ -51,25 +48,40 @@ function Contact() {
           <p>Interested to collaborate? Feel free to drop me an email.</p>
         </div>
         <div className={styles.contactFormContainer}>
-          <form className={styles.contactForm} onSubmit={handleForm}>
+          <form
+            className={styles.contactForm}
+            onSubmit={handleSubmit(handleForm)}
+          >
             <input
-              type="email"
+              {...register("email", {
+                required: true,
+                pattern: {
+                  value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                  message: "Please enter a valid email address",
+                },
+              })}
               name="email"
               id="email"
               placeholder="Enter your email"
               className={styles.inputBox}
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              ref={myRef}
             />
+            {errors.email && (
+              <Error className="error">{errors.email.message}</Error>
+            )}
             <textarea
-              name="message"
+              {...register("message", {
+                required: true,
+                minLength: 10,
+              })}
               id="message"
               placeholder="Your Message"
               className={`${styles.inputBox} ${styles.bodyInput}`}
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
             ></textarea>
+            {errors.message && (
+              <Error className="error">
+                Your Message must contain at least 10 characters.
+              </Error>
+            )}
             <button type="submit" className={styles.contactBtn}>
               Send Email
             </button>
