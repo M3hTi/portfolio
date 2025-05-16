@@ -9,6 +9,7 @@ import SideBar from "../components/SideBar";
 import { useForm } from "react-hook-form";
 import Error from "../components/Error";
 import { BiHandicap } from "react-icons/bi";
+import Button from "../ui/Button";
 
 function Contact() {
   const {
@@ -101,11 +102,9 @@ function Contact() {
           <img src="/vector.png" alt="" />
         </div>
       </div>
-      <button className={`go-home-Btn ${sharedStyles.homeBg}`}>
-        <Link to="/">
-          <IoHome className="homeIcon" />
-        </Link>
-      </button>
+      <Button to="/" className={`go-home-Btn ${sharedStyles.homeBg}`}>
+            <IoHome className="homeIcon" />
+      </Button>
     </main>
   );
 }
