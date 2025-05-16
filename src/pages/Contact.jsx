@@ -1,15 +1,15 @@
-import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser";
-
-import { IoHome } from "react-icons/io5";
-import sharedStyles from "../components/shared.module.css";
-import styles from "./Contact.module.css";
-import SocialIcons from "../components/SocialIcons";
-import SideBar from "../components/SideBar";
 import { useForm } from "react-hook-form";
-import Error from "../components/Error";
 import { BiHandicap } from "react-icons/bi";
+import { IoHome } from "react-icons/io5";
+import { Link } from "react-router-dom";
+
+import Error from "../components/Error";
+import sharedStyles from "../components/shared.module.css";
+import SideBar from "../components/SideBar";
+import SocialIcons from "../components/SocialIcons";
 import Button from "../ui/Button";
+import styles from "./Contact.module.css";
 
 function Contact() {
   const {
@@ -103,7 +103,7 @@ function Contact() {
         </div>
       </div>
       <Button to="/" className={`go-home-Btn ${sharedStyles.homeBg}`}>
-            <IoHome className="homeIcon" />
+        <IoHome className="homeIcon" />
       </Button>
     </main>
   );
