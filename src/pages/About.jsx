@@ -22,15 +22,7 @@ function About() {
           <div className={styles.aboutMainLeft}>
             <h3 className={styles.aboutSubHeading}>Developer</h3>
             <p className={styles.aboutSubHeadingDetails}>
-              I’m a passionate junior front-end developer who enjoys coding and
-              continuous learning. I have a solid understanding of HTML, CSS,
-              and JavaScript, and I'm skilled in building dynamic interfaces
-              using React. I'm also familiar with OOP principles, AJAX,
-              Promises, and working with APIs. I stay curious about emerging
-              technologies and love exploring new tools that help build better
-              web experiences. I graduated from Azad University, South Tehran
-              Branch, and I’m currently focused on growing my skills in modern
-              front-end development practices.
+             I'm a motivated junior front-end developer with a strong foundation in HTML, CSS, and JavaScript, and hands-on experience building dynamic user interfaces with React. I’m well-versed in core programming concepts such as object-oriented programming (OOP), asynchronous operations (Promises, AJAX), and API integration. I have a deep passion for clean, efficient code and a commitment to continuous learning. A recent graduate of Azad University (South Tehran Branch), I’m currently focused on advancing my skills in modern front-end technologies and best practices to create responsive, user-friendly web applications.
             </p>
           </div>
           <div className={styles.aboutMainRight}>
