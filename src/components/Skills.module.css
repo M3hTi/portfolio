@@ -1,0 +1,15 @@
+.skill-cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 80px 20%;
+}
+.skill {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
