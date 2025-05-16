@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
-import styles from "./SideBar.module.css";
 import { NavLink } from "react-router-dom";
+
+import styles from "./SideBar.module.css";
 
 function SideBar() {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
@@ -42,6 +43,16 @@ function SideBar() {
                   <li>
                     <NavLink to="/about" className="clear-nav-link">
                       About
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/projects" className="clear-nav-link">
+                      Projects
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/skills" className="clear-nav-link">
+                      Skills
                     </NavLink>
                   </li>
                   <li>
