@@ -4,6 +4,7 @@ import styles from "./Home.module.css";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { IoHome } from "react-icons/io5";
 import SideBar from "../components/SideBar";
+import Button from "../ui/Button";
 
 function Home() {
   return (
@@ -35,11 +36,6 @@ function Home() {
           />
         </div>
       </div>
-      <button className="go-home-Btn">
-        <Link>
-          <IoHome className="homeIcon" />
-        </Link>
-      </button>
     </main>
   );
 }
