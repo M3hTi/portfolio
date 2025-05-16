@@ -4,6 +4,7 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { IoHome } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import SideBar from "../components/SideBar";
+import Button from "../ui/Button";
 
 function About() {
   return (
@@ -54,11 +55,9 @@ function About() {
           <img src="/vector.png" alt="" />
         </div>
       </div>
-      <button className={`go-home-Btn ${sharedStyles.homeBg}`}>
-        <Link to="/">
-          <IoHome className="homeIcon" />
-        </Link>
-      </button>
+      <Button to="/" className={`go-home-Btn ${sharedStyles.homeBg}`}>
+        <IoHome className="homeIcon" />  
+      </Button>
     </main>
   );
 }
