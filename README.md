@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with React and Vite showcasing my projects, skills, and professional background.
 
-![Portfolio Screenshot](./screenshot.png)
+![Portfolio Screenshot](/public/portfolio.png)
 
 ## 🚀 Features
 
