@@ -1,6 +1,7 @@
 import { IoHome } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
+import Footer from "../components/Footer";
 import OpacityContainer from "../components/OpacityContainer";
 import sharedStyles from "../components/shared.module.css";
 import SideBar from "../components/SideBar";
@@ -26,12 +27,7 @@ function SkillsPage() {
 
           <Skills />
 
-          <div className={sharedStyles.footerLink}>
-            Check out{" "}
-            <Link to="/contact" className="clear-links">
-              Get in touch
-            </Link>
-          </div>
+          <Footer>Get in touch</Footer>
           <div className={styles["skills-vector-frame"]}>
             <img
               src="../../public/skills_vector.1fb5f4a4.png"

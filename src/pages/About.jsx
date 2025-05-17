@@ -2,6 +2,7 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { IoHome } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
+import Footer from "../components/Footer";
 import OpacityContainer from "../components/OpacityContainer";
 import sharedStyles from "../components/shared.module.css";
 import SideBar from "../components/SideBar";
@@ -45,12 +46,7 @@ function About() {
               />
             </div>
           </div>
-          <div className={sharedStyles.footerLink}>
-            Check out my{" "}
-            <Link to="/projects" style={{ color: "black" }}>
-              projects
-            </Link>
-          </div>
+          <Footer>projects</Footer>
           <div className={sharedStyles.vectorFrame}>
             <img src="/vector.png" alt="" />
           </div>

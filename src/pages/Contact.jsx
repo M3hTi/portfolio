@@ -5,6 +5,7 @@ import { IoHome } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 import Error from "../components/Error";
+import Footer from "../components/Footer";
 import OpacityContainer from "../components/OpacityContainer";
 import sharedStyles from "../components/shared.module.css";
 import SideBar from "../components/SideBar";
@@ -94,12 +95,7 @@ function Contact() {
           </div>
           <SocialIcons />
 
-          <div className={sharedStyles.footerLink}>
-            Read more{" "}
-            <Link to="/about" style={{ color: "black" }}>
-              about me.
-            </Link>
-          </div>
+          <Footer>about me</Footer>
           <div className={sharedStyles.vectorFrame}>
             <img src="/vector.png" alt="" />
           </div>
