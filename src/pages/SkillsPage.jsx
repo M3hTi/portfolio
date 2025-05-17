@@ -30,7 +30,7 @@ function SkillsPage() {
           <Footer>Get in touch</Footer>
           <div className={styles["skills-vector-frame"]}>
             <img
-              src="../../public/skills_vector.1fb5f4a4.png"
+              src="/public/skills_vector.1fb5f4a4.png"
               className={styles["skills-vector"]}
             />
           </div>
