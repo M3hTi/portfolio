@@ -13,7 +13,9 @@ body {
 
 .clear-links {
   /* text-decoration: none; */
-  color: black;
+  color: #458ff6;
+  text-decoration: none;
+  font-weight: 700;
 }
 
 .go-home-Btn {
