@@ -3,10 +3,12 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 
+import { useSideBar } from "../contexts/SideBarContext";
 import styles from "./SideBar.module.css";
 
 function SideBar() {
-  const [isSideBarOpen, setIsSideBarOpen] = useState(false);
+  // const [isSideBarOpen, setIsSideBarOpen] = useState(false);
+  const { setIsSideBarOpen, isSideBarOpen, toggle } = useSideBar();
 
   useEffect(() => {
     function handleKey(e) {
@@ -18,14 +20,11 @@ function SideBar() {
     document.addEventListener("keydown", handleKey);
 
     return () => document.removeEventListener("keydown", handleKey);
-  }, []);
+  }, [setIsSideBarOpen]);
   return (
     <>
       <div className={styles.burgerContainer}>
-        <button
-          className={styles.menuBtn}
-          onClick={() => setIsSideBarOpen((s) => !s)}
-        >
+        <button className={styles.menuBtn} onClick={() => toggle()}>
           <GiHamburgerMenu />
         </button>
       </div>
