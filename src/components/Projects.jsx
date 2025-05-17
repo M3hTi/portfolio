@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import sharedStyles from "../components/shared.module.css";
 import { getProjects } from "../services/apiProjects";
 import Button from "../ui/Button";
+import OpacityContainer from "./OpacityContainer";
 import Project from "./Project";
 import styles from "./Projects.module.css";
 import SideBar from "./SideBar";
@@ -18,64 +19,66 @@ function Projects() {
   return (
     <main>
       <SideBar />
-      <div className={styles.sectionContainer}>
-        <div className={sharedStyles.headerContainer}>
-          <h1 className={styles.projectsHeader}>My Projects</h1>
-          <p style={{ paddingBlock: "24px" }}>
-            Here are a few cool things I've worked on, do check them out!
-          </p>
-        </div>
-        <div style={{ width: "100%" }}>
-          {isLoading && (
-            <div
+      <OpacityContainer>
+        <div className={styles.sectionContainer}>
+          <div className={sharedStyles.headerContainer}>
+            <h1 className={styles.projectsHeader}>My Projects</h1>
+            <p style={{ paddingBlock: "24px" }}>
+              Here are a few cool things I've worked on, do check them out!
+            </p>
+          </div>
+          <div style={{ width: "100%" }}>
+            {isLoading && (
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  minHeight: "300px",
+                }}
+              >
+                <Spinner />
+              </div>
+            )}
+            {!isLoading && projects?.length === 0 && (
+              <div
+                style={{
+                  textAlign: "center",
+                  padding: "50px 0",
+                  color: "#7d7987",
+                  fontSize: "1.2rem",
+                }}
+              >
+                No projects found. Check back later!
+              </div>
+            )}
+            {!isLoading && projects?.length > 0 && (
+              <div className={styles["project-cards-container"]}>
+                {projects.map((project) => (
+                  <Project key={project.id} projectObj={project} />
+                ))}
+              </div>
+            )}
+          </div>
+          <div className={sharedStyles.footerLink}>
+            Check out{" "}
+            <Link
+              to="/skills"
+              className="clear-links"
               style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                minHeight: "300px",
+                color: "#458ff6",
+                textDecoration: "none",
+                fontWeight: "700",
               }}
             >
-              <Spinner />
-            </div>
-          )}
-          {!isLoading && projects?.length === 0 && (
-            <div
-              style={{
-                textAlign: "center",
-                padding: "50px 0",
-                color: "#7d7987",
-                fontSize: "1.2rem",
-              }}
-            >
-              No projects found. Check back later!
-            </div>
-          )}
-          {!isLoading && projects?.length > 0 && (
-            <div className={styles["project-cards-container"]}>
-              {projects.map((project) => (
-                <Project key={project.id} projectObj={project} />
-              ))}
-            </div>
-          )}
+              my skills!
+            </Link>
+          </div>
         </div>
-        <div className={sharedStyles.footerLink}>
-          Check out{" "}
-          <Link
-            to="/skills"
-            className="clear-links"
-            style={{
-              color: "#458ff6",
-              textDecoration: "none",
-              fontWeight: "700",
-            }}
-          >
-            my skills!
-          </Link>
-        </div>
-      </div>
-      <Button to="/" className={`go-home-Btn ${sharedStyles.homeBg}`}>
-        <IoHome className="homeIcon" />
-      </Button>
+        <Button to="/" className={`go-home-Btn ${sharedStyles.homeBg}`}>
+          <IoHome className="homeIcon" />
+        </Button>
+      </OpacityContainer>
     </main>
   );
 }
