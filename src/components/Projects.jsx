@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import sharedStyles from "../components/shared.module.css";
 import { getProjects } from "../services/apiProjects";
 import Button from "../ui/Button";
+import Footer from "./Footer";
 import OpacityContainer from "./OpacityContainer";
 import Project from "./Project";
 import styles from "./Projects.module.css";
@@ -60,20 +61,7 @@ function Projects() {
               </div>
             )}
           </div>
-          <div className={sharedStyles.footerLink}>
-            Check out{" "}
-            <Link
-              to="/skills"
-              className="clear-links"
-              style={{
-                color: "#458ff6",
-                textDecoration: "none",
-                fontWeight: "700",
-              }}
-            >
-              my skills!
-            </Link>
-          </div>
+          <Footer>skills</Footer>
         </div>
         <Button to="/" className={`go-home-Btn ${sharedStyles.homeBg}`}>
           <IoHome className="homeIcon" />
