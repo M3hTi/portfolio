@@ -21,7 +21,9 @@ function Projects() {
       <div className={styles.sectionContainer}>
         <div className={sharedStyles.headerContainer}>
           <h1 className={styles.projectsHeader}>My Projects</h1>
-          <p>Here are a few cool things I've worked on, do check them out!</p>
+          <p style={{ paddingBlock: "24px" }}>
+            Here are a few cool things I've worked on, do check them out!
+          </p>
         </div>
         <div style={{ width: "100%" }}>
           {isLoading && (
