@@ -1,14 +1,17 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 
 import { useSideBar } from "../contexts/SideBarContext";
+import { useOutsideClick } from "../hooks/useOutSideClick";
 import styles from "./SideBar.module.css";
 
 function SideBar() {
   // const [isSideBarOpen, setIsSideBarOpen] = useState(false);
   const { setIsSideBarOpen, isSideBarOpen, toggle } = useSideBar();
+
+  const { ref } = useOutsideClick(() => setIsSideBarOpen(false));
 
   useEffect(() => {
     function handleKey(e) {
@@ -30,7 +33,7 @@ function SideBar() {
       </div>
       {isSideBarOpen && (
         <>
-          <div className={`${styles.menuWrap}`}>
+          <div className={`${styles.menuWrap}`} ref={ref}>
             <div className={styles.menu}>
               <nav className={styles.itemList}>
                 <ul>
