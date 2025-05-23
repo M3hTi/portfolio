@@ -4,7 +4,7 @@ import { IoClose } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 
 import { useSideBar } from "../contexts/SideBarContext";
-import { useOutsideClick } from "../hooks/useOutSideClick";
+import { useOutsideClick } from "../hooks/useOutsideClick";
 import styles from "./SideBar.module.css";
 
 function SideBar() {
