@@ -75,13 +75,7 @@ portfolio/
    npm run build
    ```
 
-## 📱 Contact
 
-Feel free to reach out through the contact form on the website or connect with me on:
-
-- Email: your.email@example.com
-- GitHub: [YourGitHubUsername](https://github.com/YourGitHubUsername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
 
 ## 📄 License
 
