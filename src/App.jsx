@@ -2,13 +2,12 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 import styles from "./components/shared.module.css";
+import Spinner from "./components/Spinner";
 
 // import SideBarProvider from "./contexts/SideBarContext";
 const SideBarProvider = lazy(() => import("./contexts/SideBarContext"));
-
-import Spinner from "./components/Spinner";
-
 // import About from "./pages/About";
 const About = lazy(() => import("./pages/About"));
 // import Contact from "./pages/Contact";
