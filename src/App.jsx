@@ -4,7 +4,7 @@ import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import styles from "./components/shared.module.css";
-import Spinner from "./components/Spinner";
+import Spinner from "./ui/Spinner";
 
 // import SideBarProvider from "./contexts/SideBarContext";
 const SideBarProvider = lazy(() => import("./contexts/SideBarContext"));

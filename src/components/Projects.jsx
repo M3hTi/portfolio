@@ -10,7 +10,7 @@ import OpacityContainer from "./OpacityContainer";
 import Project from "./Project";
 import styles from "./Projects.module.css";
 import SideBar from "./SideBar";
-import Spinner from "./Spinner";
+import Spinner from "../ui/Spinner";
 
 function Projects() {
   const { isLoading, data: projects } = useQuery({

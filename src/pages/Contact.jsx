@@ -4,7 +4,7 @@ import { BiHandicap } from "react-icons/bi";
 import { IoHome } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
-import Error from "../components/Error";
+import Error from "../ui/Error";
 import Footer from "../components/Footer";
 import OpacityContainer from "../components/OpacityContainer";
 import sharedStyles from "../components/shared.module.css";
