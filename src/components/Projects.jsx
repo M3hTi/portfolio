@@ -59,9 +59,9 @@ function Projects() {
   }
 
   useEffect(() => {
-    const filterParams = searchParams.get("filterBy");
-    console.log(filterParams)
-    setFilterBy(filterParams)
+    const filterParams = searchParams.get("filterBy") || "";
+    console.log(filterParams);
+    setFilterBy(filterParams);
   }, [searchParams]);
 
   return (
