@@ -17,8 +17,8 @@ function Projects() {
   const [filterBy, setFilterBy] = useState("");
   const [searchParams, setSearchParams] = useSearchParams();
   const { isLoading, data: projects } = useQuery({
-    queryKey: ["projects"],
-    queryFn: getProjects,
+    queryKey: ["projects", filterBy],
+    queryFn: () => getProjects(filterBy),
   });
 
   // console.log(projects);
@@ -34,21 +34,21 @@ function Projects() {
 
   // console.log(technologies);
 
-  let filterProjects;
+  // let filterProjects;
 
-  switch (filterBy) {
-    case "":
-      filterProjects = projects;
-      break;
-    case "all":
-      filterProjects = projects;
-      break;
-    default:
-      filterProjects = projects?.filter((project) =>
-        project.frame_works.includes(filterBy)
-      );
-      break;
-  }
+  // switch (filterBy) {
+  //   case "":
+  //     filterProjects = projects;
+  //     break;
+  //   case "all":
+  //     filterProjects = projects;
+  //     break;
+  //   default:
+  //     filterProjects = projects?.filter((project) =>
+  //       project.frame_works.includes(filterBy)
+  //     );
+  //     break;
+  // }
 
   // console.log(filterProjects)
 
@@ -116,7 +116,7 @@ function Projects() {
             )}
             {!isLoading && projects?.length > 0 && (
               <div className={styles["project-cards-container"]}>
-                {filterProjects.map((project) => (
+                {projects.map((project) => (
                   <Project key={project.id} projectObj={project} />
                 ))}
               </div>
