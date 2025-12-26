@@ -3,14 +3,16 @@ import { useForm } from "react-hook-form";
 import { BiHandicap } from "react-icons/bi";
 import { IoHome } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import Snowfall from "react-snowfall";
 
-import Error from "../ui/Error";
 import Footer from "../components/Footer";
 import OpacityContainer from "../components/OpacityContainer";
 import sharedStyles from "../components/shared.module.css";
 import SideBar from "../components/SideBar";
 import SocialIcons from "../components/SocialIcons";
 import Button from "../ui/Button";
+import Error from "../ui/Error";
+import { isWinter } from "../utils/helpers";
 import styles from "./Contact.module.css";
 
 function Contact() {
@@ -46,6 +48,7 @@ function Contact() {
     <main>
       <SideBar />
       <OpacityContainer>
+        {isWinter() && <Snowfall color="#82C3D9" snowflakeCount={200} />}
         <div className={sharedStyles.sectionContainer}>
           <div className={sharedStyles.headerContainer}>
             <h1>Get in touch.</h1>

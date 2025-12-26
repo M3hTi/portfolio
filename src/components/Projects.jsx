@@ -2,11 +2,13 @@ import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { IoHome } from "react-icons/io5";
 import { useSearchParams } from "react-router-dom";
+import Snowfall from "react-snowfall";
 
 import sharedStyles from "../components/shared.module.css";
 import { getProjects } from "../services/apiProjects";
 import Button from "../ui/Button";
 import Spinner from "../ui/Spinner";
+import { isWinter } from "../utils/helpers";
 import Footer from "./Footer";
 import OpacityContainer from "./OpacityContainer";
 import Project from "./Project";
@@ -69,6 +71,7 @@ function Projects() {
       <SideBar />
       <OpacityContainer>
         <div className={styles.sectionContainer}>
+          {isWinter() && <Snowfall color="#82C3D9" snowflakeCount={200} />}
           <div className={sharedStyles.headerContainer}>
             <h1 className={styles.projectsHeader}>My Projects</h1>
             <p style={{ paddingBlock: "24px" }}>
