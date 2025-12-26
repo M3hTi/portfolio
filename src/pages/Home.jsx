@@ -1,18 +1,20 @@
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { IoHome } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import Snowfall from "react-snowfall";
 
 import OpacityContainer from "../components/OpacityContainer";
 import SideBar from "../components/SideBar";
 import Button from "../ui/Button";
+import { isWinter } from "../utils/helpers";
 import styles from "./Home.module.css";
-
 function Home() {
   return (
     <main>
       <SideBar />
       <OpacityContainer>
         <div className={styles.homeContainer}>
+          {isWinter() && <Snowfall color="white" snowflakeCount={200} />}
           <div className={styles.headerText}>
             <h1>Welcome to my portfolio!</h1>
             <p>

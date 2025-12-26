@@ -1,12 +1,14 @@
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { IoHome } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import Snowfall from "react-snowfall";
 
 import Footer from "../components/Footer";
 import OpacityContainer from "../components/OpacityContainer";
 import sharedStyles from "../components/shared.module.css";
 import SideBar from "../components/SideBar";
 import Button from "../ui/Button";
+import { isWinter } from "../utils/helpers";
 import styles from "./About.module.css";
 
 function About() {
@@ -14,6 +16,7 @@ function About() {
     <main>
       <SideBar />
       <OpacityContainer>
+        {isWinter() && <Snowfall color="#82C3D9" snowflakeCount={200} />}
         <div className={sharedStyles.sectionContainer}>
           <div className={sharedStyles.headerContainer}>
             <h1>About Me</h1>

@@ -1,5 +1,6 @@
 import { IoHome } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import Snowfall from "react-snowfall";
 
 import Footer from "../components/Footer";
 import OpacityContainer from "../components/OpacityContainer";
@@ -7,6 +8,7 @@ import sharedStyles from "../components/shared.module.css";
 import SideBar from "../components/SideBar";
 import Skills from "../components/Skills";
 import Button from "../ui/Button";
+import { isWinter } from "../utils/helpers";
 import styles from "./SkillsPage.module.css";
 
 function SkillsPage() {
@@ -16,6 +18,7 @@ function SkillsPage() {
         <SideBar />
       </div>
       <OpacityContainer>
+        {isWinter() && <Snowfall color="#82C3D9" snowflakeCount={200} />}
         <div className={sharedStyles.sectionContainer}>
           <div className={sharedStyles.headerContainer}>
             <h1>My Skills.</h1>
