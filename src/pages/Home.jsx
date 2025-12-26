@@ -8,7 +8,6 @@ import SideBar from "../components/SideBar";
 import Button from "../ui/Button";
 import { isWinter } from "../utils/helpers";
 import styles from "./Home.module.css";
-
 function Home() {
   return (
     <main>
